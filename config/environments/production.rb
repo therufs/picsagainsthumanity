@@ -1,8 +1,30 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-config.action_mailer.delivery_method = :postmark
-config.action_mailer.postmark_settings = { api_key: ENV['POSTMARK_API_KEY']}
+Mail.defaults do
+  delivery_method :smtp, {
+    :address => ENV['POSTMARK_SMTP_SERVER'],
+    :port => '25',
+    :domain => 'yourapp.heroku.com',
+    :user_name => ENV['POSTMARK_API_KEY'],
+    :password => ENV['POSTMARK_API_KEY'],
+    :authentication => :plain,
+    :enable_starttls_auto => true
+  }
+end
+
+ActionMailer::Base.smtp_settings = {
+  :port           => '25',
+  :address        => ENV['POSTMARK_SMTP_SERVER'],
+  :user_name      => ENV['POSTMARK_API_KEY'],
+  :password       => ENV['POSTMARK_API_KEY'],
+  :domain         => 'yourapp.heroku.com',
+  :authentication => :plain,
+}
+ActionMailer::Base.delivery_method = :smtp
+
+# config.action_mailer.delivery_method = :postmark
+# config.action_mailer.postmark_settings = { api_key: ENV['POSTMARK_API_KEY']}
 
 #config.action_mailer.smtp_settings = { :address => "smtp.postmarkapp.com", :port => 2525 }
 

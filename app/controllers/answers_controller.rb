@@ -12,7 +12,7 @@ class AnswersController < ApplicationController
     # @answer.question_id = current_question.id
     @answer.user_id = current_user.id ## not sure if this is good/necessary
     if @answer.save
-      redirect_to answer_path[answer], notice: "Answer submitted!"
+      redirect_to answer_path(@answer.id), notice: "Answer submitted!"
     else
       render 'new'
     end

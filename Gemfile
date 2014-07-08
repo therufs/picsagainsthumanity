@@ -29,6 +29,10 @@ gem 'spring',        group: :development
 # use Devise
 gem 'devise'
 
+# handle uploads
+  gem 'carrierwave'
+  gem 'mini_magick'
+
 # set up for Heroku
 group :production do
   gem 'pg'

@@ -1,0 +1,11 @@
+<% form_for @answer do |f| %>
+
+  <%= f.label :caption %>
+  <%= f.text_field :caption %>
+
+  <%= f.label "Pic to upload" %>
+  <%= f.file_field :pic %>
+
+  <%= f.submit %>
+
+<% end %>

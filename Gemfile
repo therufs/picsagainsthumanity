@@ -29,8 +29,12 @@ gem 'spring',        group: :development
 # use Devise
 gem 'devise'
 
-# use PG for Heroku
-gem 'pg', group: :production
+# set up for Heroku
+group :production do
+  gem 'pg'
+  gem 'mail'
+  gem 'postmark'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

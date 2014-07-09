@@ -1,4 +1,4 @@
-<%= form_for @answer do |f| %>
+<%= form_for :question_answer, url: question_answers_path(id: @answer.id), method: :post do |f| %>
 
   <%= f.label :caption %>
   <%= f.text_field :caption %>

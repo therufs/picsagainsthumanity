@@ -1,0 +1,14 @@
+
+<table>
+<tr><td><%= @question.text %></td></tr>
+<% if @question.answers.any? %>
+  <% @question.answers.each do |a| %>
+    <tr>
+      <td><%= a.caption %></td>
+      <td><img src="<%= a.pic.thumb %>"</img></td>
+    </tr>
+  <% end %>
+<% end %>
+</table>
+
+<%= link_to "Answer this question", new_question_answer_path(@question.id) %>

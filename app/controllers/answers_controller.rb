@@ -9,10 +9,10 @@ class AnswersController < ApplicationController
 
   def create
     @answer = Answer.new(answer_params)
-    # @answer.question_id = current_question.id
     @answer.user_id = current_user.id ## not sure if this is good/necessary
+    @answer.question_id = params[:question_id]
     if @answer.save
-      redirect_to answer_path(@answer.id), notice: "Answer submitted!"
+      redirect_to question_path(params[:question_id]), notice: "Answer submitted!"
     else
       render 'new'
     end
@@ -34,7 +34,7 @@ class AnswersController < ApplicationController
   private
 
   def answer_params
-    params.require(:answer).permit(:caption, :user_id, :question_id, :pic)
+    params.require(:question_answer).permit(:caption, :user_id, :question_id, :pic)
   end
 
 end

@@ -29,7 +29,7 @@ gem 'spring',        group: :development
 # use Devise
 gem 'devise'
 
-# gem 'acts-as-taggable-on'
+gem 'acts-as-taggable-on'
 
 # handle uploads
   gem 'carrierwave'

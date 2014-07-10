@@ -27,8 +27,6 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    acts-as-taggable-on (3.3.0)
-      activerecord (>= 3, < 5)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
     builder (3.2.2)
@@ -53,7 +51,7 @@ GEM
     erubis (2.7.0)
     execjs (2.2.1)
     hike (1.2.3)
-    i18n (0.6.9)
+    i18n (0.6.11)
     jbuilder (2.1.2)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -67,7 +65,7 @@ GEM
     mime-types (1.25.1)
     mini_magick (3.7.0)
       subexec (~> 0.2.1)
-    minitest (5.3.5)
+    minitest (5.4.0)
     multi_json (1.10.1)
     orm_adapter (0.5.0)
     pg (0.17.1)
@@ -137,7 +135,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  acts-as-taggable-on
   carrierwave
   coffee-rails (~> 4.0.0)
   devise

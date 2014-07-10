@@ -39,7 +39,7 @@ gem 'devise'
 group :production do
   gem 'pg'
   gem 'mail'
-  gem 'postmark'
+  gem 'postmark-rails'
 end
 
 # Use ActiveModel has_secure_password

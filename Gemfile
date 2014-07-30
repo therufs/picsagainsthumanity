@@ -42,6 +42,21 @@ group :production do
   gem 'postmark-rails'
 end
 
+
+gem 'better_errors'
+gem 'binding_of_caller'
+# gem 'brakeman'
+gem 'capybara'
+# gem 'capybara-webkit'
+gem 'database_cleaner'
+gem 'dotenv-rails'
+gem 'pry-rails'
+gem 'quiet_assets'
+gem 'rails_best_practices'
+gem 'selenium-webdriver'
+# gem 'wrong'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
